@@ -10,28 +10,43 @@ export class CurrencyComponent implements OnInit, AfterViewChecked {
 
   constructor(private currency: CurrencyGetService, private cdRef: ChangeDetectorRef) { }
 
-  conversion: any;
+  USD: number = 0;
+  EUR: number = 0
+  GBP: number = 0;
+  UAH: number = 0;
 
-  rate = {
-    rates: {
-      EUR: 0
-    }
-  }
+
+  config: any;
+
+  rate!: any;
 
   ngOnInit(): void {
-    this.getCurrency();
+    this.getUSD();
+    this.getEUR();
+    this.getGBP();
   }
 
-  getCurrency() {
-    this.currency.getCurrency().subscribe((res: any) => {
-      this.rate = res;
-      console.log(this.rate);
+  getUSD() {
+    this.currency.getCurrency('usd').subscribe((res: any) => {
+      this.USD = res?.usd.uah.toFixed(2);
+    })
+  }
+
+  getEUR() {
+    this.currency.getCurrency('eur').subscribe((res: any) => {
+      this.EUR = res?.eur.uah.toFixed(2);
+    })
+  }
+
+  getGBP() {
+    this.currency.getCurrency('gbp').subscribe((res: any) => {
+      console.log(res);
+      this.GBP = res?.gbp.uah.toFixed(2);
     })
   }
 
   ngAfterViewChecked(): void {
-    this.conversion = this.rate.rates.EUR * 100 + " EUR"
-    this.cdRef.detectChanges();
+
   }
 
 }

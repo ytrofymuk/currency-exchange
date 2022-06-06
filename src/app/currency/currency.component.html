@@ -1,3 +1,20 @@
-<h2>Rate: {{rate.rates.EUR | json}}</h2>
-<h3>100 USD = {{ conversion }}</h3>
-<button (click)="getCurrency()">Click</button>
+<div class="container">
+    <h1>Exchange Rates</h1>
+    <div class="currencies">
+        <div class="USD">
+            <img src="./assets/icons/united-states.png" alt="USD">
+            <span>USD</span>
+            <span>{{USD}}</span>
+        </div>
+        <div class="EUR">
+            <img src="./assets/icons/european-union.png" alt="EUR">
+            <span>EUR</span>
+            <span>{{EUR}}</span>
+        </div>
+        <div class="POUND">
+            <img src="./assets/icons/united-kingdom.png" alt="GPB">
+            <span>GBP</span>
+            <span>{{GBP}}</span>
+        </div>
+    </div>
+</div>

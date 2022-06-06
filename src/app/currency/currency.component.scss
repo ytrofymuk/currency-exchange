@@ -1,0 +1,36 @@
+:host {
+    display: block;
+    min-height: 25vh;
+    background-color: #00897B;
+    color:#A7FFEB
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.currencies {
+    display: flex;
+    justify-content: space-around;
+    span {
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: 500;
+            font-size: 18px;
+            &:last-child {
+                margin-left: 30px;
+            }
+        }
+    
+    img {
+        position: relative;
+        top: 6px;
+    }
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}

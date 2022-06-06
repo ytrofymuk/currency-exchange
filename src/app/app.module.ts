@@ -6,6 +6,7 @@ import { CurrencyGetService } from './services/currency-get.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CurrencyComponent } from './currency/currency.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CurrencyComponent } from './currency/currency.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [CurrencyGetService],
   bootstrap: [AppComponent]
