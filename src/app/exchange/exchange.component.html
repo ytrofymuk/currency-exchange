@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+        <mat-form-field class="input br-0 background-color-violet" appearance="fill">
+            <mat-label>Amount</mat-label>
+            <input type="number" matInput #value1 [(ngModel)]="baseValue" (input)="calcSecondary()">
+        </mat-form-field>
+        <mat-form-field class="select br-0 background-color-violet" appearance="fill">
+            <mat-label>Currency</mat-label>
+            <mat-select [(ngModel)]="baseCurrencyValue" name="baseCurrency" class="value-color-white"
+                (selectionChange)="calc()">
+                <mat-option *ngFor="let country of currencyOption" [value]="country.name">
+                    <img [src]="country.url">
+                    {{country.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <button mat-fab color="warn">
+        {{rate}}
+    </button>
+    <div>
+        <mat-form-field class="input br-0 background-color-violet" appearance="fill">
+            <mat-label>Amount</mat-label>
+            <input type="number" matInput #value2 [(ngModel)]="secondaryValue" (input)="calcBase()">
+        </mat-form-field>
+        <mat-form-field class="select br-0 background-color-violet" appearance="fill">
+            <mat-label>Currency</mat-label>
+            <mat-select [(ngModel)]="secondaryCurrencyValue" class="value-color-white" name="secondaryCurrency"
+                (selectionChange)="calc()">
+                <mat-option *ngFor="let country of currencyOption" [value]="country.name">
+                    <img [src]="country.url">
+                    {{country.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+</div>

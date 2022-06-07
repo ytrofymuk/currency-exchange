@@ -1,6 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.mat-form-field-appearance-fill.br-0 .mat-form-field-flex  {
+    border-radius: 0;
+}
+
+.value-color-white .mat-select-value-text.ng-tns-c78-2.ng-star-inserted,.value-color-white .mat-select-value-text.ng-tns-c78-5.ng-star-inserted  {
+    color: #fff;
+}
+
+.background-color-violet .mat-form-field-flex.ng-tns-c62-3,.background-color-violet .mat-form-field-flex.ng-tns-c62-4,.background-color-violet .mat-form-field-flex.ng-tns-c62-0,.background-color-violet .mat-form-field-flex.ng-tns-c62-1 {
+    background-color: rgb(98, 62, 153);
+}
+
+.mat-form-field-flex.ng-tns-c62-4, .mat-form-field-flex.ng-tns-c62-1 {
+    border-left: 1px solid green;
 }

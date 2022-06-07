@@ -1,4 +1,4 @@
-import { AfterViewChecked, Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CurrencyGetService } from '../services/currency-get.service';
 
 @Component({
@@ -6,19 +6,14 @@ import { CurrencyGetService } from '../services/currency-get.service';
   templateUrl: './currency.component.html',
   styleUrls: ['./currency.component.scss']
 })
-export class CurrencyComponent implements OnInit, AfterViewChecked {
+export class CurrencyComponent implements OnInit {
 
-  constructor(private currency: CurrencyGetService, private cdRef: ChangeDetectorRef) { }
+  constructor(private currency: CurrencyGetService) { }
 
   USD: number = 0;
   EUR: number = 0
   GBP: number = 0;
   UAH: number = 0;
-
-
-  config: any;
-
-  rate!: any;
 
   ngOnInit(): void {
     this.getUSD();
@@ -40,13 +35,9 @@ export class CurrencyComponent implements OnInit, AfterViewChecked {
 
   getGBP() {
     this.currency.getCurrency('gbp').subscribe((res: any) => {
-      console.log(res);
       this.GBP = res?.gbp.uah.toFixed(2);
     })
   }
 
-  ngAfterViewChecked(): void {
-
-  }
 
 }

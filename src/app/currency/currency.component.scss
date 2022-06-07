@@ -2,7 +2,7 @@
     display: block;
     min-height: 25vh;
     background-color: #00897B;
-    color:#A7FFEB
+    color:#fff;
 }
 
 .container {
@@ -11,6 +11,7 @@
 }
 
 .currencies {
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     span {
@@ -19,7 +20,7 @@
             font-weight: 500;
             font-size: 18px;
             &:last-child {
-                margin-left: 30px;
+                margin-left: 20px;
             }
         }
     
@@ -33,4 +34,20 @@ h1 {
     padding-top: 20px;
     text-align: center;
     margin-bottom: 30px;
+}
+
+@media(max-width: 520px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        margin-bottom: 15px;
+    }
+    .currencies {
+        display: block;
+        text-align: center;
+        div {
+            margin-bottom: 10px;
+        }
+    }
 }
