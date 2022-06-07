@@ -109,5 +109,7 @@
       }
     }
   },
-  "defaultProject": "currency-exchange"
+  "cli": {
+    "analytics": false
+  }
 }
