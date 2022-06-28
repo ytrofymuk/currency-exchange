@@ -23,6 +23,7 @@ export class CurrencyComponent implements OnInit {
 
   getUSD() {
     this.currency.getCurrency('usd').subscribe((res: any) => {
+      console.log(res);
       this.USD = res?.usd.uah.toFixed(2);
     })
   }

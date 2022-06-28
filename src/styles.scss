@@ -8,14 +8,15 @@
     border-radius: 0;
 }
 
-.value-color-white .mat-select-value-text.ng-tns-c78-2.ng-star-inserted,.value-color-white .mat-select-value-text.ng-tns-c78-5.ng-star-inserted  {
+.value-color-white .mat-select-value-text,.value-color-white .mat-select-value-text {
     color: #fff;
 }
 
-.background-color-violet .mat-form-field-flex.ng-tns-c62-3,.background-color-violet .mat-form-field-flex.ng-tns-c62-4,.background-color-violet .mat-form-field-flex.ng-tns-c62-0,.background-color-violet .mat-form-field-flex.ng-tns-c62-1 {
-    background-color: rgb(98, 62, 153);
+
+.mat-form-field-flex {
+border-left: 1px solid green;
 }
 
-.mat-form-field-flex.ng-tns-c62-4, .mat-form-field-flex.ng-tns-c62-1 {
-    border-left: 1px solid green;
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: rgb(98, 62, 153);
 }
